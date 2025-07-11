@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="index.css">
+  <style>
+    .cart-container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      font-family: sans-serif;
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .cart-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .cart-item img {
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .cart-item h3 {
+      margin: 0;
+    }
+
+    .cart-item p {
+      margin: 4px 0;
+    }
+
+    .delete-btn {
+      background: #dc3545;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .delete-btn:hover {
+      background: #b02a37;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+        <div class="logo"><img src="img/logo3.jpg" alt="KrishnaShop" class="logo1"></div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html" >Shop</a>
+            <a href="about.html" >About</a>
+            <a href="cart.html" class="active">Cart</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <!-- <a href="loginfrm.html">Login/Register</a> -->
+            <button class="emergency-btn" onclick="handleEmergency()">EMERGENCY</button>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    </header>
+  <div class="cart-container">
+    <h2>Your Cart</h2>
+    <div id="cartItems"></div>
+  </div>
+<!-- <footer class="footer">
+  
+  <div class="footer-container">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7los_LadBuwWlWiv84qRYzoZQY5HXvzkImyJja7t9544blYbM" alt="KrishnaShop" class="logo1">
+    <div class="footer-section">
+      
+      <h3>KrishnaShop</h3>
+      <p>Your trusted shopping partner for quality products.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#">Terms & Condition</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: support@krishnashop.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 KrishnaShop. All rights reserved.</p>
+  </div>
+  <div>
+    <center>
+<samp class="samp1">
+  KRISHHNASHOP
+</samp>
+</center>
+</footer> -->
+  <script>
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartDiv = document.getElementById("cartItems");
+
+    function renderCart() {
+      cartDiv.innerHTML = "";
+
+      if (cart.length === 0) {
+        cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+        return;
+      }
+
+      cart.forEach((product, index) => {
+        const item = document.createElement("div");
+        item.className = "cart-item";
+
+        item.innerHTML = `
+          <div class="cart-info">
+            <img src="${product.image}" alt="${product.name}">
+            <div>
+              <h3>${product.name}</h3>
+              <p>Price: ₹${product.price}</p>
+            </div>
+          </div>
+          <button class="delete-btn" onclick="deleteProduct(${index})">❌ Remove</button>
+        `;
+
+        cartDiv.appendChild(item);
+      });
+    }
+
+    function deleteProduct(index) {
+      cart.splice(index, 1); // remove from array
+      localStorage.setItem("cart", JSON.stringify(cart)); // update storage
+      renderCart(); // re-render
+    }
+
+    // First load
+    renderCart();
+  </script>
+</body>
+</html>
