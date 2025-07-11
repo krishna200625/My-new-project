@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7los_LadBuwWlWiv84qRYzoZQY5HXvzkImyJja7t9544blYbM" alt="KrishnaShop" class="logo1"></div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html" class="active">Shop</a>  
+            <a href="about.html" >About</a>
+            <a href="cart.html">Cart</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <!-- <a href="loginfrm.html">Login/Register</a> -->
+            <button class="emergency-btn" onclick="handleEmergency()">EMERGENCY</button>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    </header>
+    <div class="filter-container">
+  <button onclick="filterProductsByCategory('all')">All</button>
+  <button onclick="filterProductsByCategory('i phone')">iPhone</button>
+  <button onclick="filterProductsByCategory('one plus')">OnePlus</button>
+  <button onclick="filterProductsByCategory('samsung')">Samsung</button>
+  <button onclick="filterProductsByCategory('headphone')">Headphones</button>
+  <button onclick="filterProductsByCategory('laptop')">Laptops</button>
+</div>
+
+    <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()">
+</div>
+
+     <div class="main-container">
+      <div class="price-filter">
+  <h3>Filter by Price</h3>
+  <label for="min-price">Min: ₹<span id="minPriceVal">0</span></label>
+  <input type="range" id="min-price" min="0" max="115000" value="0" step="100">
+  
+  <label for="max-price">Max: ₹<span id="maxPriceVal">115000</span></label>
+  <input type="range" id="max-price" min="0" max="115000" value="115000" step="100">
+  
+  <button onclick="filterProducts()">Apply Filter</button>
+
+</div>
+
+<div id="product-list">
+  <!-- Example products -->
+  <div class="product" data-price="500">Product A - ₹2500</div>
+  <div class="product" data-price="1500">Product B - ₹11500</div>
+  <div class="product" data-price="3000">Product C - ₹13000</div>
+  <div class="product" data-price="4500">Product D - ₹14500</div>
+</div>
+
+    <div class="product-details">
+    <div class="img-div">
+    <img src="img/apple.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>i Phone</h3>
+    <p>₹ 1,50,000</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('I Phone',150000,'img/apple.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+    </div>
+    <!-- product2 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/apple2.jpg" alt="" class="product-img">
+    </div>
+    <div class="product">
+      <h3>I Phone Pro</h3>
+    <p>₹ 1,25,000</p>
+    </div>
+     <div class="btn-group btn-set" >
+      <button class="btn primary" onclick="addToCart('I Phone Pro',125000,'img/apple2.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product3 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/apple3.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>I Phone 13</h3>
+    <p>₹ 1,40,000</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('I Phone 13',140000,'img/apple3.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product4 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/apple4.jpg" alt="" class="product-img">
+    </div>
+    <div class="product">
+      <h3>I Phone 16</h3>
+    <p>₹ 1,34,000</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('I Phone 16', 134000,'img/apple4.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product5 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/apple5.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>I Phone Pro Max</h3>
+    <p>₹1,56,000</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('I Phone Pro Max', 156000,'img/apple5.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div><!-- product6 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/plus1.jpg" alt="" class="product-img">
+    </div>
+    <div class="product">
+      <h3>One Plus Node</h3>
+    <p>₹47,000</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('One Plus Node', 30000,'img/plus1.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product7 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/plus3.jpg" alt="" class="product-img">
+    </div>
+    <div class="product">
+      <h3>One Plus Node</h3>
+    <p>₹45,000</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('One Plus Node', 29000,'img/plus2.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product8 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/plus2.jpg" alt="" >
+    </div>
+    <div class="product">
+      <h3>One Plus 9</h3>
+    <p>₹55,500</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Moblie', 55500,'img/plus3.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product9 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/plus4.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>One Plus 11 5G</h3>
+    <p>₹65,900</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('One Plus 11 5G', 65900,'img/plus4.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product10 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/plus5.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>One Plus 9</h3>
+    <p>₹57,999</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('One Plus 9', 27999,'img/plus5.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product11 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/samsung1.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Samsung Galaxy</h3>
+    <p>₹12,500</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Samsung Galaxy', 12500,'img/samsung1.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product12 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/samsung2.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Samsung Galaxy A14 5G</h3>
+    <p>₹12,900</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('Samsung Galaxy A14 5G', 12900,'img/samsung2.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+
+<!-- product13 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/samsung3.jpg" alt="" class="product-img">
+    </div>
+    <div class="product">
+      <h3>Samsung Galaxy F15 5G</h3>
+    <p>₹1,12,400</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('Samsung Galaxy F15 5G', 112400,'img/samsung3.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product14 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/samsung4.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Samsung Galaxy A15 5G</h3>
+    <p>₹1,14,500</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Samsung Galaxy A15 5G', 114500,'img/samsung4.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product15 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/samsung5.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Samsung Galaxy</h3>
+    <p>₹11,500</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Samsung Galaxy', 11500,'img/samsung5.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product16 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/handphones1.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Boat HeadPhone</h3>
+    <p>₹2000</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Boat HeadPhone', 2000,'img/handphones1.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product17 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/handphones2.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>HeadPhone</h3>
+    <p>₹2200</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('HeadPhone', 2200,'img/handphones2.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product18 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/handphones3.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Headphone</h3>
+    <p>₹1500</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('HeadPhone', 2000,'img/handphones3.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product15 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/handphones4.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>HeadPhone</h3>
+    <p>₹2500</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('HeadPhone', 2500,'img/handphones4.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product15 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/handphones5.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>HeadPhone</h3>
+    <p>₹2300</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('HeadPhone', 2300,'img/handphones5.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product17 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/asus.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Asus VivoBook Laptops</h3>
+    <p>₹67000</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Asus VivoBook', 67000,'img/asus.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product18 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/lenovo.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Lenovo Laptops</h3>
+    <p>₹47000</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Lenovo', 47000,'img/lenovo.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product17 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/hp.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>HP Laptops</h3>
+    <p>₹69000</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('HP', 69000,'img/hp.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product17 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/dell.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Dell Laptops</h3>
+    <p>₹67000</p>
+    </div>
+     <div class="btn-group">
+      <button class="btn primary" onclick="addToCart('Dell', 67000,'img/dell.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+<!-- product17 -->
+     <div class="product-details">
+     <div class="img-div">
+    <img src="img/applemacbookpro.jpg" alt="">
+    </div>
+    <div class="product">
+      <h3>Apple MackBook Laptops</h3>
+    <p>₹1,67000</p>
+    </div>
+     <div class="btn-group btn-set">
+      <button class="btn primary" onclick="addToCart('Apple MacBook', 167000,'img/applemacbookpro.jpg')"> Add to Cart</button>
+      <button class="btn visit" onclick="visitProduct()"> BY NOW</button>
+      <!-- <button class="btn share" onclick="shareProduct()">📤 Share</button> -->
+      <!-- <button class="btn like" onclick="likeProduct()">❤️ Like</button> -->
+    </div>
+</div>
+  </div>
+  <script src="index.js"></script>
+  <script>
+  const minSlider = document.getElementById('min-price');
+  const maxSlider = document.getElementById('max-price');
+  const minLabel = document.getElementById('minPriceVal');
+  const maxLabel = document.getElementById('maxPriceVal');
+
+  // Update labels
+  minSlider.addEventListener('input', () => {
+    minLabel.textContent = minSlider.value;
+    if (parseInt(minSlider.value) > parseInt(maxSlider.value)) {
+      maxSlider.value = minSlider.value;
+      maxLabel.textContent = maxSlider.value;
+    }
+  });
+
+  maxSlider.addEventListener('input', () => {
+    maxLabel.textContent = maxSlider.value;
+    if (parseInt(maxSlider.value) < parseInt(minSlider.value)) {
+      minSlider.value = maxSlider.value;
+      minLabel.textContent = minSlider.value;
+    }
+  });
+
+  // 🟡 Filter Logic - Based on price inside <p>₹xxxxx</p>
+  function filterProducts() {
+    const min = parseInt(minSlider.value);
+    const max = parseInt(maxSlider.value);
+
+    const allProducts = document.querySelectorAll('.product-details');
+
+    allProducts.forEach(product => {
+      const priceText = product.querySelector('.product p')?.innerText || '';
+      const numericPrice = parseInt(priceText.replace(/[^\d]/g, '')); // removes ₹ and commas
+
+      if (numericPrice >= min && numericPrice <= max) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+</script>
+
+
+
+</body>
+</html>

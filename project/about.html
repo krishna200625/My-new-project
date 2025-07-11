@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="main-header">
+        <div class="logo"><img src="img/logo3.jpg" alt="KrishnaShop" class="logo1"></div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>  
+            <a href="about.html" class="active">About</a>
+            <a href="cart.html">Cart</a>
+            <a href="service.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+            <!-- <a href="loginfrm.html">Login/Register</a> -->
+            <button class="emergency-btn" onclick="handleEmergency()">EMERGENCY</button>
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </header>
+    <section class="what-we-do-single">
+  <div class="container">
+    <div class="content">
+      <div class="text">
+        <h2>What We Do</h2>
+        <p>
+          At <strong>KrishnaShop</strong>, our mission is simple — to redefine the way people shop online. We are more than just a digital marketplace. We are a trusted companion on your shopping journey, delivering handpicked, high-quality products that fit your needs, budget, and lifestyle. Whether you are looking for everyday essentials or unique finds, KrishnaShop is your reliable destination.
+        </p>
+
+        <p>
+          We specialize in curating a diverse catalog across categories like electronics, fashion, homeware, beauty, and more — ensuring that every product we offer meets strict quality standards. Our team carefully researches, reviews, and selects each item so you don’t have to worry about quality or reliability.
+        </p>
+
+        <!-- <p>
+          Shopping with us means access to fast and secure delivery services, user-friendly browsing, easy payment options, and responsive customer care. We work with top logistics partners to ensure your orders reach you on time, no matter where you are in India — from major cities to rural towns.
+        </p>
+
+        <p>
+          What truly sets us apart is our dedication to building long-term relationships with our customers. Your satisfaction is at the core of everything we do. We listen to your feedback, constantly evolve our platform, and aim to deliver not just products — but a complete, delightful shopping experience.
+        </p>
+
+        <p>
+          At KrishnaShop, we don’t just sell products — we build trust, deliver happiness, and grow with you. Your needs inspire our vision. Your loyalty fuels our growth. And your experience defines our success.
+        </p> -->
+      </div>
+
+      <div class="image">
+        <img src="img/about1.jpg" alt="KrishnaShop Services">
+      </div>
+    </div>
+  </div>
+</section>
+<section class="handcrafted-section">
+  <!-- LEFT SIDE: Heading + Main Image -->
+  <div class="left-area">
+    <h1><center>Handcrafted Ceramics for Everyday Life</h1></center>
+    <img src="img/handcarft1.jpg" alt="Main Product" class="main-img">
+  </div>
+
+  <!-- RIGHT SIDE: Award, small imgs, button, arrow -->
+  <div class="right-area">
+    <div class="top-right-imgs">
+      <img src="img/handcarft3.jpg" alt="Small Img 1">
+       <p>Got the International<br>Design Award on 2018</p>
+      <!-- <img src="https://picsum.photos/id/1001/100/60" alt="Small Img 2"> -->
+    </div>
+
+    <div class="award-box">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7los_LadBuwWlWiv84qRYzoZQY5HXvzkImyJja7t9544blYbM" alt="Award Logo" class="award-logo">
+     
+    </div>
+
+    <button class="btn" onclick="showProducts()" id="showBtn" >View All Products</button>
+<div class="top-right-imgs-1">
+      <img src="img/handcarft2.jpg" alt="Small Img 1">
+       <p>Got the International<br>Design Award on 2020</p>
+      <!-- <img src="https://picsum.photos/id/1001/100/60" alt="Small Img 2"> -->
+    </div>
+    <!-- <img src="https://cdn-icons-png.flaticon.com/512/545/545674.png" class="arrow-icon" alt="Arrow"> -->
+  </div>
+  <section class="products" id="products" style="display: none;">
+    <img src="img/h1.jpg" alt="Slide 1">
+        <img src="img/l1.jpg" alt="Slide 2">
+        <img src="img/m1.jpg" alt="Slide 3">
+        <img src="img/m2.jpg" alt="Slide 2">
+        <img src="img/h2.jpg" alt="Slide 1">
+        <img src="img/g4.jpg" alt="Slide 2">
+        <img src="img/m3.jpg" alt="Slide 3">
+        <img src="img/m4.jpg" alt="Slide 2">
+    <!-- product cards -->
+</section>
+</section>
+<div class="slider-container">
+    <div class="slider-track">
+      <!-- Logos Set 1 -->
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <!-- Add more if needed -->
+
+      <!-- Logos Set 2 (Duplicate for infinite loop) -->
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+    </div>
+  </div>
+<section class="our-team">
+  <div class="container">
+    <h2>Meet Our Team</h2>
+    <p class="team-intro">
+      Behind KrishnaShop is a team of passionate professionals committed to delivering the best online shopping experience. From customer care to product sourcing and tech — meet the minds that make it happen.
+    </p>
+
+    <div class="team-grid">
+      <!-- Member 1 -->
+      <div class="team-member">
+        <img src="img/men2.jpg" alt="Rahul Verma">
+        <h3>Rahul Verma</h3>
+        <p class="role">Founder & CEO</p>
+        <p class="bio">
+          Visionary entrepreneur with a mission to simplify online shopping in India. Rahul leads the company with innovation, strategy, and customer-first thinking.
+        </p>
+        <div class="social-icons">
+    <a href="#" class="social"><img src="img/instagram.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/twitter.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/f1.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/linkdin.png" alt="" class="icon-img"></a>
+
+  </div>
+      </div>
+
+      <!-- Member 2 -->
+      <div class="team-member">
+        <img src="img/w3.jpg" alt="Anjali Patel">
+        <h3>Anjali Patel</h3>
+        <p class="role">Head of Operations</p>
+        <p class="bio">
+          From logistics to quality checks, Anjali ensures every order is processed and delivered smoothly across the country.
+        </p>
+        <div class="social-icons">
+    <a href="#" class="social"><img src="img/instagram.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/twitter.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/f1.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/linkdin.png" alt="" class="icon-img"></a>
+
+  </div>
+      </div>
+
+      <!-- Member 3 -->
+      <div class="team-member">
+        <img src="img/men1.jpg" alt="Karan Shah">
+        <h3>Karan Shah</h3>
+        <p class="role">Lead Developer</p>
+        <p class="bio">
+          The tech brain behind KrishnaShop’s smooth and secure website experience. Karan ensures fast performance and easy navigation.
+        </p>
+  <div class="social-icons">
+    <a href="#" class="social"><img src="img/instagram.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/twitter.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/f1.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/linkdin.png" alt="" class="icon-img"></a>
+
+  </div>
+      </div>
+</div>
+</div>
+<div class="container-1">
+      <!-- Member 4 -->
+      <div class="team-member">
+        <img src="img/w1.jpg" alt="Sneha Joshi">
+        <h3>Sneha Joshi</h3>
+        <p class="role">Customer Experience Manager</p>
+        <p class="bio">
+          Friendly, fast, and reliable — Sneha leads the support team to ensure every customer query is handled with care and professionalism.
+        </p>
+        <div class="social-icons">
+    <a href="#" class="social"><img src="img/instagram.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/twitter.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/f1.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/linkdin.png" alt="" class="icon-img"></a>
+
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="img/w2.jpg" alt="Pooja Mehra">
+        <h3>Pooja Mehra</h3>
+        <p class="role">Product Manager</p>
+        <p class="bio">Oversees new product listings and ensures quality standards are maintained.</p>
+        <div class="social-icons">
+    <a href="#" class="social"><img src="img/instagram.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/twitter.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/f1.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/linkdin.png" alt="" class="icon-img"></a>
+
+        </div>
+      </div>
+      <div class="team-member">
+        <img src="img/men3.jpg" alt="Amit Thakur">
+        <h3>Amit Thakur</h3>
+        <p class="role">Marketing Manager</p>
+        <p class="bio">Handles social campaigns and brand visibility across platforms.</p>
+        <div class="social-icons">
+    <a href="#" class="social"><img src="img/instagram.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/twitter.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/f1.png" alt="" class="icon-img"></a>
+    <a href="#" class="social"><img src="img/linkdin.png" alt="" class="icon-img"></a>
+
+        </div>
+      </div>
+    </div>
+  
+</section>
+<section class="boost-wrapper">
+  <!-- LEFT SECTION -->
+   <br>
+  <div class="boost-left">
+    <br>
+    <h2>A Unique Approach to Boost <br>Your Business</h2>
+<br>
+    <div class="comment-box">
+      <br>
+      <h4>"</h4>
+      <p>
+        “We always prioritize quality and consistency. Our tools <br> help people connect directly <br>with brands they trust.”  
+      </p><br>
+      <div class="profile">
+        <br><br>
+        <img src="img/w4.jpg" alt="Profile">
+        <div class="info">
+          <h4>Anjali Sharma</h4>
+          <p>Community Lead, Ke</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT SECTION -->
+  <div class="boost-right">
+    <!-- Top Left: Image -->
+    <div class="grid-box grid-img" >
+      <img src="img/approch.jpg" alt="Top Image">
+    </div>
+
+    <!-- Top Right: Logo + 26M+ -->
+    <div class="grid-box center-box icon1">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" class="icon" alt="Logo">
+      <h3>26M+</h3>
+    </div>
+
+    <!-- Bottom Left: Google + rating + company -->
+    <div class="grid-box center-box icon1">
+      <img src="img/google.png" class="icon" alt="Google">
+      <p>4.9 Rating</p>
+      <p>KRISHHNASHOP</p>
+    </div>
+
+    <!-- Bottom Right: Image -->
+    <div class="grid-box grid-img bottom-img" >
+      <img src="img/approch2.jpg" alt="Bottom Image">
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  
+  <div class="footer-container">
+<img src="img/logo3.jpg" 
+alt="KrishnaShop" class="logo1">
+    <div class="footer-section">
+      
+      <h3>KrishnaShop</h3>
+      <p>Your trusted shopping partner for quality products.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="terms.html">Terms & Condition</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: support@krishnashop.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 KrishnaShop. All rights reserved.</p>
+  </div>
+  <div>
+    <center>
+<samp class="samp1">
+  KRISHHNASHOP
+</samp>
+</center>
+</footer>
+
+
+</div>
+  <script src="index.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo"><img
+        src="img/logo3.jpg"alt="KrishnaShop" class="logo1">
+      </div>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">About</a>
+      <a href="cart.html">Cart</a>
+      <a href="service.html" >Services</a>
+      <a href="contact.html" class="active">Contact Us</a>
+      <!-- <a href="loginfrm.html">Login/Register</a> -->
+      <button class="emergency-btn" onclick="handleEmergency()">EMERGENCY</button>
+    </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </header>
+  
+
+
+<div class="contatus">
+  <center><h1>CONTACT</h1></center>
+  <center><p>We love to hear from you</p></center>
+</div>
+
+<br><br><br><br><br>
+<div class="slider-container">
+    <div class="slider-track">
+      <!-- Logos Set 1 -->
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <!-- Add more if needed -->
+
+      <!-- Logos Set 2 (Duplicate for infinite loop) -->
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/amazon.png" alt="Amazon" />
+      <img src="img/microsoft.png" alt="Microsoft" />
+      <img src="img/g1.png" alt="Google" />
+      <img src="img/a1.png" alt="Apple" />
+      <img src="img/f1.png" alt="Facebook" />
+    </div>
+  </div>
+
+<br><br><br>
+  <div class="contatus-details">
+    <div class="details">
+      <p>call us</p>
+      <br>
+      <p>+91 82200525208</p>
+      <br>
+      <p>E-Mail</p>
+      <br>
+      <p>dalbanjankrishna5@gmail.com</p>
+      <br>
+      <p>Address</p>
+      <br>
+      <p>21 Ram Talavadi Arvind Socity Mission Road Nadiad</p>
+    </div>
+    <div class="from">
+      <form  id="contactForm" >
+        Name <br><input type="text" id="name" required><br>
+        E-mail <br> <input type="email" id="email" required><br>
+        Location <br>
+        <select id="location" name="service" required>
+    <option value="">-- Select a Location --</option>
+    <option value="listing">Nadiad</option>
+    <option value="store-setup">Surat</option>
+    <option value="store-setup">Anand</option>
+    <option value="store-setup">Ahmedabad</option>
+    <option value="store-setup">Pune</option>
+    <option value="support">Udaipur</option>
+    <option value="delivery">Rajkot</option>
+  </select>
+<br>
+        <button type="submit" class="frmbtn">Submit</button>
+      </form>
+      <p id="formMessage"></p>
+    </div>
+  </div>
+
+  <section class="map-section">
+  <h2>Find Us Here</h2>
+  <div class="map-container">
+  <iframe 
+  src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d205757.59354225115!2d72.39589529749537!3d23.045895497112152!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1752044135138!5m2!1sen!2sin" 
+  width="600" 
+  height="450" 
+  style="border:0;" allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+
+  </iframe>
+  </div>
+</section>
+
+  <footer class="footer">
+  
+  <div class="footer-container">
+<img src="img/logo3.jpg" 
+alt="KrishnaShop" class="logo1">
+    <div class="footer-section">
+      
+      <h3>KrishnaShop</h3>
+      <p>Your trusted shopping partner for quality products.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="terms.html">Terms & Condition</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Contact Us</h4>
+      <p>Email: support@krishnashop.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 KrishnaShop. All rights reserved.</p>
+  </div>
+  <div>
+    <center>
+<samp class="samp1">
+  KRISHHNASHOP
+</samp>
+</center>
+</footer>
+<script src="index.js"></script>
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let location = document.getElementById("location").value;
+    let message = document.getElementById("formMessage");
+
+    // Empty field check
+    if (name === "" || email === "" || location === "") {
+      message.textContent = "Please fill in all fields.";
+      message.style.color = "red";
+      return;
+    }
+
+    // Email format check
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!emailPattern.test(email)) {
+      message.textContent = "Enter a valid email address.";
+      message.style.color = "red";
+      return;
+    }
+
+    // ✅ Success
+    message.textContent = "Form submitted successfully!";
+    message.style.color = "green";
+
+    // ✅ Show alert popup
+    alert("Thank you, " + name + "! Your form has been submitted successfully from " + location + ".");
+
+    // Reset the form
+    document.getElementById("contactForm").reset();
+  });
+</script>
+
+</body>
+</html>
